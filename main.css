@@ -1,0 +1,199 @@
+@import url('https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@500;700;800&display=swap');
+
+:root {
+    /* primary */
+    --Light-red: hsl(0, 100%, 67%);
+    --Orangey-yellow: hsl(39, 100%, 56%);
+    --Green-teal: hsl(166, 100%, 37%);
+    --Cobalt-blue: hsl(234, 85%, 45%);
+    
+    /* Gradients background */
+    --Light-slate-blue-bg: hsl(252, 100%, 67%);
+    --Light-royal-blue-bg: hsl(241, 81%, 54%);
+
+    /* Gradients circle */
+    --Violet-blue-cr : hsla(256, 72%, 46%);
+    --Persian-blue-cr: hsla(241, 72%, 46%);
+    
+    /* Neutral */
+    --White: hsl(0, 0%, 100%);
+    --Pale-blue: hsl(221, 100%, 96%);
+    --Light-lavender: hsl(241, 100%, 89%);
+    --Dark-gray-blue: hsl(224, 30%, 27%);
+
+    /* Gradients transparent */
+    --primary-gradient : linear-gradient(var(--Light-slate-blue-bg), var( --Light-royal-blue-bg));
+    --circle-gradient: linear-gradient(var(--Violet-blue-cr), var(--Persian-blue-cr));
+}
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body {
+    font-family: 'Hanken Grotesk', sans-serif;
+    font-size: 18px;
+    background-color: var(--White);
+    /* background-color:red; */
+    /* min-height: 100vh; */
+   
+}
+.container {
+    
+    
+    /* max-width: 80%; */
+    min-height: 100vh;
+   
+    /* margin: 0 auto; */
+}
+.section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: .8rem;
+    min-height: 100vh;
+    background-color: var(--White);
+    
+   
+    
+}
+.result-col {
+    display: flex;
+    flex-direction: column;
+    /* gap: 2rem; */
+    background-color: var(--Light-slate-blue);
+    padding: 2rem;
+    width: 265px;
+    height: 350px;
+    border-radius: 15px;
+    text-align: center;
+    color: var(--White);
+}
+.title h4 {
+    font-size: 1rem;
+    font-weight: 500;
+    margin-bottom: 1.5rem;
+}
+.score {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--Cobalt-blue);
+    border-radius: 50%;
+    width: 130px;
+    height: 130px;
+    padding: 1rem;
+    align-self: center;
+    margin-bottom: 1.5rem;
+}
+.score h2 {
+    font-size: 3rem;
+    
+}
+.score span {
+    font-size: .8rem;
+    color: var(--Light-lavender);
+}
+.content {
+    text-align: center;
+}
+.content h3 {
+    font-size: 1.2rem;
+    font-weight: 600;
+    margin-bottom: 1rem;
+}
+.content p {
+    color: var(--Light-lavender);
+    font-size: .8rem;
+    margin-bottom: .7rem;
+}
+.summary-col {
+    background-color: var(--White);
+    height: 350px;
+    display: flex;
+    flex-direction: column;
+    width: 265px;
+    padding: 2rem;
+    box-shadow: 6px 14px 48px -4px rgba(115, 142, 230, .31);
+    /* box-shadow: 3px 10px 5px 0px rgba(0,0,0,0.75); */
+    /* border-radius:0 15px 0 0; */
+    text-align: left;
+}
+.summary-col h4 {
+    font-size: 1rem;
+    color: var(--Dark-gray-blue);
+    font-weight: 700;
+    margin-bottom: 1rem ;
+}
+.summary-type {
+    display: flex;
+    flex-direction: column;
+    /* justify-content: space-between; */
+    /* width: 100%; */
+    gap: .7rem;
+}
+.summary-box {
+    display: flex;
+    justify-content: space-between;
+    /* background-color: blueviolet; */
+    padding:.6rem;
+    border-radius: 5px;
+    
+}
+.info-box {
+    display: flex;
+    
+}
+.info-box img {
+    margin-right: .7rem;
+}
+.reaction {
+    background-color: hsl(0, 100%, 67%, 0.1);
+    
+}
+.reaction-info {
+    color: var(--Light-red);
+}
+.memory {
+    background-color: hsl(39, 100%, 56%, 0.1);
+}
+.memory-info {
+    color: var(--Orangey-yellow);
+}
+.verbal {
+    background-color: hsl(166, 100%, 37%, .1);
+}
+.verbal-info {
+    color: var(--Green-teal);
+}
+.visual {
+    background-color: hsl(234, 85%, 45%, .1);
+}
+.visual-info{
+    color: var(--Cobalt-blue);
+}
+.visual {
+    background-color: hsl(234, 85%, 45%, .1);
+}
+
+
+
+
+
+
+
+.btn {
+    margin-top: 1.3rem;
+    padding:.5rem 1rem;
+    border-radius: 15px;
+    border: 0;
+    color: var(--White);
+    background-color: var(--Cobalt-blue);
+}
+.btn:hover {
+    background-color: var(--Dark-gray-blue);
+}
+
+
+
