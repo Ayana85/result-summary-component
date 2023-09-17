@@ -1,0 +1,196 @@
+@import url('https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@500;700;800&display=swap');
+
+:root {
+    /* primary */
+    --Light-red: hsl(0, 100%, 67%);
+    --Orangey-yellow: hsl(39, 100%, 56%);
+    --Green-teal: hsl(166, 100%, 37%);
+    --Cobalt-blue: hsl(234, 85%, 45%);
+    
+    /* Gradients background */
+    --Light-slate-blue-bg: hsl(252, 100%, 67%);
+    --Light-royal-blue-bg: hsl(241, 81%, 54%);
+
+    /* Gradients circle */
+    --Violet-blue-cr : hsla(256, 72%, 46%);
+    --Persian-blue-cr: hsla(241, 72%, 46%);
+    
+    /* Neutral */
+    --White: hsl(0, 0%, 100%);
+    --Pale-blue: hsl(221, 100%, 96%);
+    --Light-lavender: hsl(241, 100%, 89%);
+    --Dark-gray-blue: hsl(224, 30%, 27%);
+
+    /* Gradients transparent */
+    --primary-gradient : linear-gradient(var(--Light-slate-blue-bg), var( --Light-royal-blue-bg));
+    --circle-gradient: linear-gradient(var(--Violet-blue-cr), var(--Persian-blue-cr));
+}
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+img,
+svg {
+    display: block;
+    max-width: 100%;
+}
+body {
+    font-family: 'Hanken Grotesk', sans-serif;
+    font-size: .9rem;
+    color: var(--Dark-gray-blue);
+}
+/* To center the body */
+@media (min-width:600px) {
+    body {
+        min-height: 100vh;
+        display: grid;
+        place-items: center;
+    }
+}
+.grid-col {
+    display: grid;
+    gap: 1rem;
+    align-content: start; /* to keep everthing groep with out stretching*/
+}
+.grid-col[data-spacing="large"] {
+    gap: 2rem;
+}
+.section-title {
+   
+    font-size: 1.5rem;
+    font-weight: 600;
+    /* margin-bottom: 1rem; */
+}
+
+.btn {
+    padding: 1rem 2rem;
+    color: var(--White);
+    border-radius: 1.6rem;
+    border: 0;
+    cursor: pointer;
+    background-color: var(--Dark-gray-blue);
+    line-height: 1;
+}
+.btn:hover,
+.btn:focus-visible {
+    background: var(--primary-gradient);
+}
+
+.container {
+    /* padding:2.5rem; */
+    max-width: 46rem;
+    display: grid;
+    border-radius: 2rem;
+}
+
+/* To get two columns */
+@media (min-width: 600px) {
+    .container {
+        grid-template-columns: repeat(2, 1fr);
+        border-radius: 2rem;
+        overflow: hidden;
+        box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+        margin-inline: 1rem;
+    }
+}
+
+
+.left-col {
+    background: var(--primary-gradient);
+    text-align: center;
+    color: hsl(0, 0%, 100%, .7);
+    border-radius:0 0 2rem 2rem;
+    padding: 2.5rem calc(3.4rem * 1.5);
+}
+@media (min-width: 600px) {
+    .left-col {
+        border-radius: 2rem;
+    }
+}
+
+.big-circle {
+    display: grid;
+    width: 12rem;
+    margin-inline: auto;
+    aspect-ratio: 1 / 1;
+    place-content: center;
+    border-radius: 50%;
+    background: var(--circle-gradient);
+   color: hsl(0, 0%, 100%, .3);
+}
+.big-circle span {
+    font-size: 5rem;
+    display: block;
+    font-weight: bold;
+    color: var(--White);
+    line-height: 1;
+}
+.rank-title{
+    font-weight: 700;
+    color: var(--White);
+    font-size: 1.75rem;
+}
+
+.right-col {
+    padding: 2.5rem;
+}
+.item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+   border-radius: .5rem;
+    padding: 1rem;
+    background-color: aquamarine;
+}
+.score-item {
+    display: flex;
+    align-items: center;
+    gap: .5rem;
+    flex-wrap: wrap;
+}
+.reaction {
+    background-color: hsl(0, 100%, 67%, 0.1);
+    color: var(--Light-red);
+    
+}
+.memory {
+    background-color: hsl(39, 100%, 56%, 0.1);
+    color: var(--Orangey-yellow);
+}
+.verbal {
+    background-color: hsl(166, 100%, 37%, .1);
+    color: var(--Green-teal);
+}
+.visual {
+    background-color: hsl(234, 85%, 45%, .1);
+    color: var(--Cobalt-blue);
+}
+
+.summary-score {
+    /* color: var(--Light-lavender); */
+    /* color: grey; */
+    font-weight: 800;
+    color: hsl(224, 30%, 27%, .6);
+}
+.summary-score span {
+    color: var(--Dark-gray-blue);
+}
+
+/* @media (min-width:600px) {
+    .container {
+        grid-template-columns: repeat(2, 1fr);
+        border-radius: 2rem;
+        overflow: hidden;
+        box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+        margin-inline: 1rem;
+    }
+    .left-col {
+        border-radius: 2rem;
+    }
+} */
